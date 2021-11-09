@@ -109,22 +109,22 @@ window.addEventListener("load", openServiceModal);
 
 const images = [
   {
-    name: "imgone.jpg",
+    name: "jason1.jpg",
   },
   {
-    name: "imgtwo.jpg",
+    name: "chucky1.jpg",
   },
   {
-    name: "imgthree.jpg",
+    name: "icandyman1.jpg",
   },
   {
-    name: "imgfour.jpg",
+    name: "pinhead1.jpg",
   },
   {
-    name: "imgfive.jpg",
+    name: "leatherface1.jpg",
   },
   {
-    name: "imgsix.jpg",
+    name: "jason2.jpg",
   },
 ];
 
@@ -189,3 +189,89 @@ window.addEventListener("load", () => {
   document.getElementById("prev-btn").addEventListener("click", prevImage);
   document.getElementById("next-btn").addEventListener("click", nextImage);
 });
+
+const openLightBox = (src) => {
+  document.getElementById("lb-thumbnails-wrapper").innerHTML = images
+    .map(
+      (img) =>
+        `<img src="./media/img/${img.name}" class="lb-thumbnail" onclick="setMainLbImage(this.src)">`
+    )
+    .join("");
+  document.getElementById("image-lightbox").style.display = "flex";
+  setMainLbImage(src);
+};
+
+const closeLightBox = () => {
+  document.getElementById("image-lightbox").style.display = "none";
+};
+
+const setMainLbImage = (tjohoppsan) => {
+  console.log(tjohoppsan);
+  document.getElementById("lb-main-image").setAttribute("src", tjohoppsan);
+  setActiveLbThumbnail();
+};
+
+//function that shows the active thumbnail, by comparing the
+//thumbnails src attribute to the main image's src attribute and
+//if it's the same sets a red border on the tumbnail
+const setActiveLbThumbnail = () => {
+  const lbThumbs = document.querySelectorAll(".lb-thumbnail");
+  console.log("thumbnail elements: ", lbThumbs);
+  lbThumbs.forEach((thumbnail) => {
+    console.log("thumbnail: ", thumbnail);
+    if (thumbnail.src === document.getElementById("lb-main-image").src) {
+      thumbnail.style.border = "2px solid red";
+    } else {
+      thumbnail.style.border = "0px";
+    }
+  });
+};
+
+const prevLbImage = () => {
+  const thumbsList = document.querySelectorAll(".lb-thumbnail");
+  //let wasZero = false;
+  for (let i = 0; i < thumbsList.length; i++) {
+    if (
+      thumbsList[i].src === document.querySelector("#lb-main-image").src &&
+      i !== 0 //&&
+      //wasZero === false
+    ) {
+      document
+        .querySelector("#lb-main-image")
+        .setAttribute("src", thumbsList[(i -= 1)].src);
+      setActiveLbThumbnail();
+    } else if (
+      thumbsList[i].src === document.querySelector("#lb-main-image").src &&
+      i === 0
+    ) {
+      document
+        .querySelector("#lb-main-image")
+        .setAttribute("src", thumbsList[(i += thumbsList.length - 1)].src);
+      setActiveLbThumbnail();
+      //wasZero = true;
+    }
+  }
+};
+
+const nextLbImage = () => {
+  const thumbsList = document.querySelectorAll(".lb-thumbnail");
+  for (let i = 0; i < thumbsList.length; i++) {
+    if (
+      thumbsList[i].src === document.querySelector("#lb-main-image").src &&
+      i !== thumbsList.length - 1
+    ) {
+      document
+        .querySelector("#lb-main-image")
+        .setAttribute("src", thumbsList[(i += 1)].src);
+      setActiveLbThumbnail();
+    } else if (
+      thumbsList[i].src === document.querySelector("#lb-main-image").src &&
+      i === thumbsList.length - 1
+    ) {
+      document
+        .querySelector("#lb-main-image")
+        .setAttribute("src", thumbsList[0].src);
+      setActiveLbThumbnail();
+    }
+  }
+};
