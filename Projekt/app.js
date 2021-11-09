@@ -94,7 +94,7 @@ const openServiceModal = () => {
         if (i === j) {
           document.getElementById(
             "service-modal-content"
-          ).innerHTML = `<h2>${services[j].name}</h2><p>${services[j].content}</p><img src="./media/img/${services[j].picture}">`;
+          ).innerHTML = `<h2>${services[j].name}</h2><p>${services[j].content}</p><img src="./media/${services[j].picture}">`;
         }
       }
     });
@@ -177,11 +177,11 @@ const nextImage = () => {
 window.addEventListener("load", () => {
   document
     .getElementById("main-image")
-    .setAttribute("src", `./media/img/${images[0].name}`);
+    .setAttribute("src", `./media/${images[0].name}`);
   document.getElementById("thumbnails-wrapper").innerHTML = images
     .map(
       (img) =>
-        `<img src="./media/img/${img.name}" class="thumbnail" onclick="setMainImage(this.src)">`
+        `<img src="./media/${img.name}" class="thumbnail" onclick="setMainImage(this.src)">`
     )
     .join("");
 
@@ -194,7 +194,7 @@ const openLightBox = (src) => {
   document.getElementById("lb-thumbnails-wrapper").innerHTML = images
     .map(
       (img) =>
-        `<img src="./media/img/${img.name}" class="lb-thumbnail" onclick="setMainLbImage(this.src)">`
+        `<img src="./media/${img.name}" class="lb-thumbnail" onclick="setMainLbImage(this.src)">`
     )
     .join("");
   document.getElementById("image-lightbox").style.display = "flex";
