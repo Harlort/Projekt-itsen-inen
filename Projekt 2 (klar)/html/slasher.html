@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Slasher</title>
+        <link rel="stylesheet" href="../css/style.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <script src="../scripts/app.js" defer></script>
+    <body>
+        <div id="service-modal-wrapper">
+            <div class="service-modal">
+                <div class="modal-header">
+                    <span onclick="closeServiceModal()"
+                        ><i class="fa fa-times"></i
+                    ></span>
+                </div>
+                <div id="service-modal-content"></div>
+            </div>
+        </div>
+        <header class="header">
+            <a class="full-logo" href="./index.html"
+                ><h1><span>S</span>lasher for <span>H</span>ire</h1></a
+            >
+            <a class="mobile-logo" href="./index.html"
+                ><h1><span>Sf</span>H</h1></a
+            >
+            <nav class="link-wrapper">
+                <a href="./index.html">Home</a>
+                <a href="./skillsets.html">Skillsets</a>
+                <a href="./slasher.html">Slasher</a>
+                <a href="#contact-section">Termination</a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
+            </div>
+        </header>
+        <div class="mobile-menu">
+            <nav class="mobile-link-wrapper">
+                <a class="mobile-link" href="./index.html">Home</a>
+                <a class="mobile-link" href="./skillsets.html">Skillsets</a>
+                <a class="mobile-link" href="./slasher.html">Slasher</a>
+                <a class="mobile-link" href="#contact-section">Termination</a>
+            </nav>
+        </div>
+        <section id="services-section" class="section">
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Jason Voorhees</h3>
+                </div>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                    Maxime cumque porro impedit voluptate natus? Dolorem
+                    consequuntur at velit sunt provident, est corporis
+                    repellendus ea nostrum, earum nesciunt sit ex quasi?...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Pinhead</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium minus repudiandae voluptate, aperiam autem animi
+                    minima iste odio illum corrupti...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Leatherface</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Sint iste quo ex libero doloribus similique illum, deleniti,
+                    doloremque velit soluta aspernatur veritatis quis officiis
+                    et! Consequuntur tempora facere magnam dolorum?...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Ghostface</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptates, cum cupiditate. Sunt qui minus voluptatem minima
+                    mollitia ratione enim libero debitis, assumenda eius ex.
+                    Reprehenderit facilis molestiae maxime dolore non...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Candyman</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptates, cum cupiditate. Sunt qui minus voluptatem minima
+                    mollitia ratione enim libero debitis, assumenda eius ex.
+                    Reprehenderit facilis molestiae maxime dolore non...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Freddy Krueger</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptates, cum cupiditate. Sunt qui minus voluptatem minima
+                    mollitia ratione enim libero debitis, assumenda eius ex.
+                    Reprehenderit facilis molestiae maxime dolore non...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Chucky</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptates, cum cupiditate. Sunt qui minus voluptatem minima
+                    mollitia ratione enim libero debitis, assumenda eius ex.
+                    Reprehenderit facilis molestiae maxime dolore non...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+            <article class="service-card">
+                <div class="service-card-header-wrapper">
+                    <h3>Micheal Myers</h3>
+                </div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Voluptates, cum cupiditate. Sunt qui minus voluptatem minima
+                    mollitia ratione enim libero debitis, assumenda eius ex.
+                    Reprehenderit facilis molestiae maxime dolore non...<b>
+                        Click to read more!</b
+                    >
+                </p>
+            </article>
+        </section>
+        <footer id="contact-section">
+            <form onsubmit="sendFormInfo()">
+                <input
+                    id="something"
+                    type="text"
+                    placeholder="Your Email"
+                    required
+                />
+                <input type="text" placeholder="Subject" required />
+                <textarea
+                    placeholder="Specify victim here!"
+                    required
+                ></textarea>
+                <button type="submit">Tell Everyone.</button>
+            </form>
+            <div class="contact-info-wrapper">
+                <div class="icon-and-text-wrap">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:slasherforhire@gmail.com">Mail us</a>
+                </div>
+                <div class="icon-and-text-wrap">
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:+001-9784350163">Phone us</a>
+                </div>
+                <div class="address-wrapper">
+                    <strong><p>Adress</p></strong>
+                    <p>707 Meridian Avenue</p>
+                    <p>CA 91030</p>
+                    <p>South Pasadena</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

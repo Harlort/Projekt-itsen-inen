@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Skillsets</title>
+        <link rel="stylesheet" href="../css/style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <script src="../scripts/app.js" defer></script>
+    <body>
+        <header class="header">
+            <a class="full-logo" href="./index.html"
+                ><h1><span>S</span>lasher for <span>H</span>ire</h1></a
+            >
+            <a class="mobile-logo" href="./index.html"
+                ><h1><span>Sf</span>H</h1></a
+            >
+            <nav class="link-wrapper">
+                <a href="./index.html">Home</a>
+                <a href="./skillsets.html">Skillsets</a>
+                <a href="./slasher.html">Slasher</a>
+                <a href="#contact-section">Termination</a>
+            </nav>
+            <div class="menu-btn">
+                <div class="menu-btn-burger"></div>
+            </div>
+        </header>
+        <div class="mobile-menu">
+            <nav class="mobile-link-wrapper">
+                <a class="mobile-link" href="./index.html">Home</a>
+                <a class="mobile-link" href="./skillsets.html">Skillsets</a>
+                <a class="mobile-link" href="./slasher.html">Slasher</a>
+                <a class="mobile-link" href="#contact-section">Termination</a>
+            </nav>
+        </div>
+        <div id="gallery-wrapper">
+            <div class="full-img" id="fullImgBox">
+                <img src="../media/jason1.jpg" id="fullImg" />
+                <span onclick="closeFullImg()">X</span>
+
+                <div id="killer-thumbnails">
+                    <div class="killer-mini-nails">
+                        <img
+                            class="helvete"
+                            src="../media/jason1.jpg"
+                            id="jason"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/pinhead1.jpg"
+                            id="pinhead"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/leatherface1.jpg"
+                            id="leatherface"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/ghostface1.jpg"
+                            id="ghostface"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/candyman1.jpg"
+                            id="candyman"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/freddy1.jpg"
+                            id="freddy"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/chucky1.jpg"
+                            id="chucky"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                        <img
+                            class="helvete"
+                            src="../media/micheal1.jpg"
+                            id="micheal"
+                            onclick="openFullImg(this.src); setBorder(this.id)"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="gallery">
+                <img
+                    src="../media/jason1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/pinhead1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/leatherface1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/ghostface1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/candyman1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/freddy1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/chucky1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+                <img
+                    src="../media/micheal1.jpg"
+                    onclick="openFullImg(this.src)"
+                />
+            </div>
+        </div>
+        <footer id="contact-section">
+            <form onsubmit="sendFormInfo()">
+                <input
+                    id="something"
+                    type="text"
+                    placeholder="Your Email"
+                    required
+                />
+                <input type="text" placeholder="Subject" required />
+                <textarea
+                    placeholder="Specify victim here!"
+                    required
+                ></textarea>
+                <button type="submit">Tell Everyone.</button>
+            </form>
+            <div class="contact-info-wrapper">
+                <div class="icon-and-text-wrap">
+                    <i class="fa fa-envelope"></i>
+                    <a href="mailto:slasherforhire@gmail.com">Mail us</a>
+                </div>
+                <div class="icon-and-text-wrap">
+                    <i class="fa fa-phone"></i>
+                    <a href="tel:+001-9784350163">Phone us</a>
+                </div>
+                <div class="address-wrapper">
+                    <strong><p>Adress</p></strong>
+                    <p>707 Meridian Avenue</p>
+                    <p>CA 91030</p>
+                    <p>South Pasadena</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
